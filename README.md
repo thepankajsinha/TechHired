@@ -1,8 +1,14 @@
-# React + Vite
+# TechHired
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# HomePage
+![tech-hired-home](https://github.com/user-attachments/assets/24760528-59e5-478e-a431-e710ce50a3b6)
 
-Currently, two official plugins are available:
+# Search Filter
+![search-filter](https://github.com/user-attachments/assets/a6673323-c6d2-4c55-ab7d-ff2d25175ed2)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Login and Signup
+![signup](https://github.com/user-attachments/assets/1fdb0ff3-5c36-4e96-9d31-4ebf58cd700f)
+![login](https://github.com/user-attachments/assets/93921432-512a-47cd-9c6b-d0fa6d3b2eb0)
+
+# Admin Dashboard
+![admin-dashboard](https://github.com/user-attachments/assets/33f7c21a-bbeb-46d4-a666-2a8b7713ca2a)
