@@ -1,6 +1,9 @@
 import React from 'react'
+import { useFirebase } from '../context/Firebase';
 
 function getFormattedDate() {
+    const {isLoggedIn} = useFirebase();
+    
     const today = new Date();
     const year = today.getFullYear();
     const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed, so add 1
@@ -43,7 +46,7 @@ function JobCard(props) {
 
             <div className='flex items-center gap-4'>
                 <p> Posted {duration > 30 ? `${Math.round(duration / 30)} months` : `${Math.round(duration)} days`} ago </p>
-                 <a href={props.jobLink}><button className='text-blue-500 border border-blue-500 px-10 py-2 rounded-md'>Apply</button></a>
+                <a href={props.jobLink} target='_blank'><button className='text-blue-500 border border-blue-500 px-10 py-2 rounded-md'>Apply</button></a>
             </div>
 
 

@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import {getAuth,signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged} from "firebase/auth"
-import { getFirestore, collection, addDoc, query, getDocs, orderBy, where} from "firebase/firestore";
+import { getFirestore, collection, addDoc, query, getDocs, orderBy, where,deleteDoc, doc} from "firebase/firestore";
 
 const FirebaseContext = createContext(null);
 
@@ -127,13 +127,22 @@ export const FirebaseProvider = (props) => {
         }
     };
     
+    const deleteJob = async (jobId) => {
+        try {
+            const jobRef = doc(firestore, "jobs", jobId); // Reference to the specific job document
+            await deleteDoc(jobRef); // Delete the document
+            alert("Job deleted successfully");
+        } catch (error) {
+            console.error("Error deleting document: ", error);
+        }
+    }
     
 
     const isLoggedIn = user ? true : false;
 
 
 
-    return <FirebaseContext.Provider value={{signupUser, loginUser,isLoggedIn,createJob, fetchJobs,jobs,loading,logoutUser,fetchJobsCustom, user}}>
+    return <FirebaseContext.Provider value={{signupUser, loginUser,isLoggedIn,createJob, fetchJobs,jobs,loading,logoutUser,fetchJobsCustom, user,deleteJob}}>
         {props.children} 
     </FirebaseContext.Provider>
 }

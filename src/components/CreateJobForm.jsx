@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFirebase } from '../context/Firebase';
+import { Plus } from 'lucide-react';
 
 const CreateJobForm = () => {
+
   const {createJob} = useFirebase();
 
   const [title, setTitle] = useState("");
@@ -185,8 +187,8 @@ const CreateJobForm = () => {
               className="mt-1 p-2 border border-gray-300 rounded w-full"
               placeholder="e.g. JavaScript"
             />
-            <button type="button" onClick={handleAddSkill} className="bg-blue-700 text-white py-2 px-4 rounded" >
-              Add
+            <button type="button" onClick={handleAddSkill} className="bg-blue-700 text-white py-2 px-4 rounded inline-flex" >
+              <Plus/> Add
             </button>
           </div>
 
