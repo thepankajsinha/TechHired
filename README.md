@@ -12,4 +12,6 @@
 ![login](https://github.com/user-attachments/assets/93921432-512a-47cd-9c6b-d0fa6d3b2eb0)
 
 # Admin Dashboard
-![admin-dashboard](https://github.com/user-attachments/assets/33f7c21a-bbeb-46d4-a666-2a8b7713ca2a)
+![admin-1](https://github.com/user-attachments/assets/3041e4a1-a14d-42af-9155-89537b046473)
+
+![admin-2](https://github.com/user-attachments/assets/2fb8dadc-4657-422e-a62c-6350be56c430)
