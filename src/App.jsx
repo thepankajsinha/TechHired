@@ -15,9 +15,9 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage/>}/>
-          <Route path="/signup" element={isLoggedIn ? <AdminDashboard/> : <SignupPage/>}/>
-          <Route path="/login" element={isLoggedIn ? <AdminDashboard/> : <LoginPage/>}/>
-          <Route path="/admin-dashboard" element={isLoggedIn ? <AdminDashboard/> : <LoginPage/>}/>
+          <Route path="tech-hired.vercel.app/signup" element={isLoggedIn ? <AdminDashboard/> : <SignupPage/>}/>
+          <Route path="tech-hired.vercel.app/login" element={isLoggedIn ? <AdminDashboard/> : <LoginPage/>}/>
+          <Route path="tech-hired.vercel.app/admin-dashboard" element={isLoggedIn ? <AdminDashboard/> : <LoginPage/>}/>
         </Routes>
       </div>
   );
