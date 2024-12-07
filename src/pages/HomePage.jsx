@@ -25,8 +25,6 @@ function HomePage() {
         {jobs.map((job) => (
             <JobCard key={job.id} {...job} />
         ))}
-
-        <h1>Thanks</h1>
     </div>
   )
 }
