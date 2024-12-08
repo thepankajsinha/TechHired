@@ -52,7 +52,7 @@ function AdminJobCard({
             {title} - {company}
           </h1>
           <p>
-            {type} &#x2022; Exp: {experience} Year &#x2022; {location} &#x2022; {salary} LPA
+            {type} &#x2022; Exp: {experience}  &#x2022; {location} &#x2022; {salary} LPA
           </p>
           <div className="flex flex-wrap items-center gap-2">
             {skills.map((skill, index) => (

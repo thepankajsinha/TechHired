@@ -8,9 +8,9 @@ const CreateJobForm = () => {
 
   const [title, setTitle] = useState("");
   const [company, setCompany] = useState("");
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Remote");
   const [postedOn, setPostedOn] = useState("");
-  const [experience, setExperience] = useState("");
+  const [experience, setExperience] = useState("Fresher");
   const [type, setType] = useState("");
   const [salary, setSalary] = useState("");
   const [skills, setSkills] = useState([]);
@@ -82,7 +82,7 @@ const CreateJobForm = () => {
 
 
           {/* Experience */}
-          <div>
+          {/* <div>
             <label className="block text-sm font-medium text-gray-700">Experience In Years</label>
             <input
               type="number"
@@ -92,6 +92,24 @@ const CreateJobForm = () => {
               className="mt-1 p-2 border border-gray-300 rounded w-full"
               placeholder="e.g. 2"
             />
+          </div> */}
+
+
+        <div>
+            <label className="block text-sm font-medium text-gray-700">Experience</label>
+            <select
+              name="type"
+              value={experience}
+              onChange={(e) => setExperience(e.target.value)}
+              className="mt-1 p-2 border border-gray-300 rounded w-full"
+            >
+              <option value="Fresher">Fresher</option>
+              <option value="1-2 Year">1-2 Year</option>
+              <option value="2-3 Year">2-3 Year</option>
+              <option value="3-4 Year">3-4 Year</option>
+              <option value="4-5 Year">4-5 Year</option>
+              <option value="5+ Year">5+ Year</option>
+            </select>
           </div>
 
 

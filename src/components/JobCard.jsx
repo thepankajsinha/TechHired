@@ -29,7 +29,7 @@ function JobCard(props) {
                 <div className='flex flex-col items-start gap-3 w-full md:w-2/3'>
                     <h1 className='text-lg md:text-xl font-semibold'>{props.title} - {props.company}</h1>
                     <p className='text-sm md:text-base'>
-                        {props.type} &#x2022; Exp: {props.experience} Year &#x2022; {props.location} &#x2022; {props.salary} LPA
+                        {props.type} &#x2022; Exp: {props.experience} &#x2022; {props.location} &#x2022; {props.salary} LPA
                     </p>
                     <div className='flex flex-wrap items-center gap-2'>
                         {props.skills.map((skill, index) => (
