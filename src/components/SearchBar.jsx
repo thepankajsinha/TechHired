@@ -76,6 +76,7 @@ function SearchBar() {
                     setType("");
                     setLocation("");
                     setCompany("");
+                    fetchJobsCustom({}); // Fetch all jobs again after clearing the search filters
                 }}
                 className='w-full md:w-60 bg-gray-500 text-white font-bold py-3 rounded-md'
             >
