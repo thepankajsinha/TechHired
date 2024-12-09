@@ -35,7 +35,7 @@ function SearchBar() {
                 className='w-full md:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md'
             >
                 <option value="" disabled hidden>Job Type</option>
-                <option value="Full Time">Full Time</option>
+                <option value="Full-time">Full Time</option>
                 <option value="Internship">Internship</option>
             </select>
 

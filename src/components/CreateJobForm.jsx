@@ -81,20 +81,6 @@ const CreateJobForm = () => {
 
 
 
-          {/* Experience */}
-          {/* <div>
-            <label className="block text-sm font-medium text-gray-700">Experience In Years</label>
-            <input
-              type="number"
-              name="experience"
-              value={experience}
-              onChange={(e) => setExperience(e.target.value)}
-              className="mt-1 p-2 border border-gray-300 rounded w-full"
-              placeholder="e.g. 2"
-            />
-          </div> */}
-
-
         <div>
             <label className="block text-sm font-medium text-gray-700">Experience</label>
             <select
