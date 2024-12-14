@@ -9,11 +9,6 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    // useEffect(() => {
-    //     if(isLoggedIn){
-    //         navigate("/admin-dashboard");
-    //     }
-    // },[isLoggedIn, ])
 
 
   const handleSubmit = async (e) => {   
