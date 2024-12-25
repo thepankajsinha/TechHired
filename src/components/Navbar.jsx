@@ -1,25 +1,8 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// function Navbar() {
-
-//   return (
-//     <div className='h-20 flex items-center justify-between w-full text-black'>
-//       <Link to={"/"}><div className='text-3xl pl-20 font-bold'>TechHired</div></Link>
-//     </div>
-//   );
-// }
-
-
-// export default Navbar;
-
-
-
-
 import React from "react";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import {FaLinkedinIn } from "react-icons/fa";
+import { SiLinktree } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { RiGithubLine } from "react-icons/ri";
 
 const Navbar = () => {
   return (
@@ -36,14 +19,14 @@ const Navbar = () => {
 
         {/* Button */}
         <div className="flex gap-2">
-          <a href="https://github.com/thepankajsinha" target="_blank">
-            <FaGithub className="text-3xl hover:text-blue-700" />
+          <a href="https://linktr.ee/theanujsinha" target="_blank">
+            <SiLinktree className="text-3xl hover:text-blue-700" />
           </a>
           <a href="https://www.linkedin.com/in/thepankajsinha/" target="_blank">
             <FaLinkedinIn className="text-3xl hover:text-blue-700" />
           </a>
-          <a href="https://x.com/thepankajsinha" target="_blank">
-            <FaXTwitter className="text-3xl hover:text-blue-700" />
+          <a href="https://github.com/thepankajsinha/TechHired" target="_blank">
+            <RiGithubLine className="text-3xl hover:text-blue-700" />
           </a>
         </div>
 

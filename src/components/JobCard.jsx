@@ -25,7 +25,7 @@ function JobCard(props) {
 
     return (
         <div className='mx-4 md:mx-20 mb-4'>
-            <div className='flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 py-4 mt-5 bg-zinc-200 rounded-md border border-black shadow-lg hover:border-blue-500 hover:translate-y-1 hover:scale-105 transition-all duration-200'>
+            <div className='flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 py-4 mt-5 bg-white rounded-md border border-black shadow-lg hover:border-blue-500 hover:translate-y-1 hover:scale-105 transition-all duration-200'>
                 <div className='flex flex-col items-start gap-3 w-full md:w-2/3'>
                     <h1 className='text-lg md:text-xl font-semibold'>{props.title} - {props.company}</h1>
                     <p className='text-sm md:text-base'>
