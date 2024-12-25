@@ -2,18 +2,14 @@
 
 # HomePage
 
-![home-1](https://github.com/user-attachments/assets/3c1c2bd4-daf6-42c1-ad85-df2c6cb1eddb)
-
-# Search Filter
-![home-filter](https://github.com/user-attachments/assets/39e61ea0-6760-4255-8556-f5299399acde)
+![home-00](https://github.com/user-attachments/assets/5078ca9a-7996-4530-99e8-a96ff9437adc)
 
 
 # Login and Signup
-![signup](https://github.com/user-attachments/assets/1fdb0ff3-5c36-4e96-9d31-4ebf58cd700f)
 
-![login](https://github.com/user-attachments/assets/93921432-512a-47cd-9c6b-d0fa6d3b2eb0)
+![login-00](https://github.com/user-attachments/assets/1528cf3d-79f5-4502-b04e-2fb3f8d4de71)
 
 # Admin Dashboard
-![admin-1](https://github.com/user-attachments/assets/3041e4a1-a14d-42af-9155-89537b046473)
 
-![admin-2](https://github.com/user-attachments/assets/2fb8dadc-4657-422e-a62c-6350be56c430)
+![admin-00](https://github.com/user-attachments/assets/418bb194-afb6-4e18-99e1-3b0508ff317d)
+
