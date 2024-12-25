@@ -28,12 +28,12 @@ const AdminDashboard = () => {
 	return (
 		<div className='min-h-screen relative overflow-hidden'>
 
-			<div className="flex justify-end mr-5">
+			<div className="flex justify-end mr-5 mt-5">
 				<button onClick={handleLogout} className="flex top-4 right-10 bg-black text-white py-2 px-6 rounded-lg cursor-pointer">Logout <LogOut className="ml-2"/></button>
 			</div>
 
 			<div className='relative z-10 container mx-auto px-4 py-16'>
-				<h1 className='text-4xl font-bold mb-8 text-black text-center'>Admin Dashboard</h1>
+				<h1 className='text-4xl font-bold mb-8 text-white text-center'>Admin Dashboard</h1>
 
 				<div className='flex justify-center mb-8'>
 					{tabs.map((tab) => (

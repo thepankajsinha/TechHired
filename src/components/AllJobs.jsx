@@ -15,7 +15,7 @@ const AllJobs = () => {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">All Available Jobs</h1>
+      <h1 className="text-3xl text-white font-bold text-center mb-8">All Available Jobs</h1>
         {jobs.map((job) => (
             <AdminJobCard key={job.id} {...job} />
         ))}

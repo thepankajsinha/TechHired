@@ -45,7 +45,7 @@ function JobCard(props) {
                         Posted {duration > 30 ? `${Math.round(duration / 30)} months` : `${Math.round(duration)} days`} ago
                     </p>
                     <a href={props.jobLink} target='_blank' rel='noopener noreferrer'>
-                        <button className='text-blue-500 border border-blue-500 px-6 py-2 rounded-md text-sm md:text-base'>
+                        <button className='text-white border bg-blue-700 px-6 py-2 rounded-md text-sm md:text-base'>
                             Apply
                         </button>
                     </a>

@@ -20,7 +20,7 @@ function SearchBar() {
                 onChange={(e) => setTitle(e.target.value)}
                 name="title"
                 value={title}
-                className='w-full md:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md'
+                className='w-full md:w-64 py-3 pl-4 bg-white font-semibold rounded-md'
             >
                 <option value="" disabled hidden>Job Role</option>
                 {jobs.map((job, index) => (
@@ -32,7 +32,7 @@ function SearchBar() {
                 onChange={(e) => setType(e.target.value)}
                 name="type"
                 value={type}
-                className='w-full md:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md'
+                className='w-full md:w-64 py-3 pl-4 bg-white font-semibold rounded-md'
             >
                 <option value="" disabled hidden>Job Type</option>
                 <option value="Full-time">Full Time</option>
@@ -43,7 +43,7 @@ function SearchBar() {
                 onChange={(e) => setLocation(e.target.value)}
                 name="location"
                 value={location}
-                className='w-full md:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md'
+                className='w-full md:w-64 py-3 pl-4 bg-white font-semibold rounded-md'
             >
                 <option value="" disabled hidden>Location</option>
                 <option value="Remote">Remote</option>
@@ -55,7 +55,7 @@ function SearchBar() {
                 onChange={(e) => setCompany(e.target.value)}
                 name="company"
                 value={company}
-                className='w-full md:w-64 py-3 pl-4 bg-zinc-200 font-semibold rounded-md'
+                className='w-full md:w-64 py-3 pl-4 bg-white font-semibold rounded-md'
             >
                 <option value="" disabled hidden>Company</option>
                 {jobs.map((job, index) => (
@@ -65,7 +65,7 @@ function SearchBar() {
 
             <button
                 onClick={search}
-                className='w-full md:w-60 bg-blue-500 text-white font-bold py-3 rounded-md'
+                className='w-full md:w-60 bg-blue-600 text-white font-bold py-3 rounded-md'
             >
                 Search
             </button>
@@ -78,7 +78,7 @@ function SearchBar() {
                     setCompany("");
                     fetchJobsCustom({}); // Fetch all jobs again after clearing the search filters
                 }}
-                className='w-full md:w-60 bg-gray-500 text-white font-bold py-3 rounded-md'
+                className='w-full md:w-60 bg-black text-white font-bold py-3 rounded-md'
             >
                 Clear
             </button>
