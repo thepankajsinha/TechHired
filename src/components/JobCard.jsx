@@ -27,27 +27,37 @@ function JobCard(props) {
   return (
     <div className="mx-4 md:mx-20 mb-4">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center px-4 md:px-6 py-4 mt-5 bg-white rounded-md border border-black shadow-lg hover:border-blue-500 hover:translate-y-1 hover:scale-105 transition-all duration-200">
-        <div className="flex flex-col items-start gap-3 w-full md:w-2/3">
+        {/* Job Details */}
+        <div className="flex flex-col items-start gap-3 w-full">
           <h1 className="text-lg md:text-xl font-semibold">
             {props.title} - {props.company}
           </h1>
-          <p className="flex text-sm md:text-base gap-2">
+          <p className="flex flex-wrap text-sm md:text-base gap-2">
             <CalendarDays className="text-blue-600" /> {props.duration} &#x2022;{" "}
             <MapPin className="text-blue-600" /> {props.location} &#x2022;{" "}
             <Wallet className="text-blue-600" /> {props.salary} &#x2022;{" "}
             {props.jobType}
           </p>
 
-          {props.contact ? ( <p className="flex text-sm md:text-base gap-2"> <Mail className="text-red-600" /> {props.contact} </p> ) : null}
-          
+          {props.contact && (
+            <p className="flex text-sm md:text-base gap-2">
+              <Mail className="text-red-600" /> {props.contact}
+            </p>
+          )}
+
           <div className="flex flex-wrap items-center gap-2">
             {props.skills.map((skill, index) => (
-              <p key={index} className="text-white bg-black py-1 px-2 rounded-md text-xs md:text-sm" > {skill} </p>
+              <p
+                key={index}
+                className="text-white bg-black py-1 px-2 rounded-md text-xs md:text-sm"
+              >
+                {skill}
+              </p>
             ))}
           </div>
         </div>
 
-
+        {/* Call to Action */}
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 w-full md:w-auto mt-4 md:mt-0">
           <p className="text-sm md:text-base">
             Posted{" "}
@@ -57,7 +67,7 @@ function JobCard(props) {
             ago
           </p>
           <a href={props.jobLink} target="_blank" rel="noopener noreferrer">
-            <button className="text-white border bg-blue-700 px-6 py-2 rounded-md text-sm md:text-base">
+            <button className="text-white border bg-blue-700 px-6 py-2 rounded-md text-sm md:text-base w-full md:w-auto">
               Apply
             </button>
           </a>
@@ -68,3 +78,4 @@ function JobCard(props) {
 }
 
 export default JobCard;
+
