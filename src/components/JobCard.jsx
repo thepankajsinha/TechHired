@@ -1,6 +1,6 @@
 import React from "react";
 import { useFirebase } from "../context/Firebase";
-import { Wallet, CalendarDays, MapPin, Mail } from "lucide-react";
+import { Wallet, CalendarDays, MapPin, Mail, Factory} from "lucide-react";
 
 function getFormattedDate() {
   const { isLoggedIn } = useFirebase();
@@ -32,11 +32,12 @@ function JobCard(props) {
           <h1 className="text-lg md:text-xl font-semibold">
             {props.title} - {props.company}
           </h1>
+
           <p className="flex flex-wrap text-sm md:text-base gap-2">
             <CalendarDays className="text-blue-600" /> {props.duration} &#x2022;{" "}
             <MapPin className="text-blue-600" /> {props.location} &#x2022;{" "}
             <Wallet className="text-blue-600" /> {props.salary} &#x2022;{" "}
-            {props.jobType}
+            <Factory className="text-blue-600" />{props.jobType}
           </p>
 
           {props.contact && (
