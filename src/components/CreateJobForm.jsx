@@ -8,13 +8,14 @@ const CreateJobForm = () => {
 
   const [title, setTitle] = useState("");
   const [company, setCompany] = useState("");
-  const [location, setLocation] = useState("Remote");
+  const [jobType, setJobType] = useState("");
   const [postedOn, setPostedOn] = useState("");
-  const [experience, setExperience] = useState("Fresher");
-  const [type, setType] = useState("");
+  const [duration, setDuration] = useState("");
+  const [location, setLocation] = useState("");
   const [salary, setSalary] = useState("");
   const [skills, setSkills] = useState([]);
   const [jobLink, setJobLink] = useState("");
+  const [contact, setContact] = useState("");
   const [skillInput, setSkillInput] = useState(""); // State for individual skill input
 
   const handleSubmit = async (e) => {
@@ -22,13 +23,14 @@ const CreateJobForm = () => {
     await createJob(
         title,
         company,
-        location,
+        jobType,
         postedOn,
-        experience,
-        type,
+        duration,
+        location,
         salary,
         skills,
-        jobLink
+        jobLink,
+        contact
       );
   };
 
@@ -81,31 +83,26 @@ const CreateJobForm = () => {
 
 
 
-        <div>
-            <label className="block text-sm font-medium text-gray-700">Experience</label>
-            <select
-              name="type"
-              value={experience}
-              onChange={(e) => setExperience(e.target.value)}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Duration</label>
+            <input
+              type="text"
+              name="duration"
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
               className="mt-1 p-2 border border-gray-300 rounded w-full"
-            >
-              <option value="Fresher">Fresher</option>
-              <option value="1-2 Year">1-2 Year</option>
-              <option value="2-3 Year">2-3 Year</option>
-              <option value="3-4 Year">3-4 Year</option>
-              <option value="4-5 Year">4-5 Year</option>
-              <option value="5+ Year">5+ Year</option>
-            </select>
+              placeholder="e.g. 4 Weeks"
+            />
           </div>
 
 
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Location</label>
+            <label className="block text-sm font-medium text-gray-700">JobType</label>
             <select
               name="type"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              value={jobType}
+              onChange={(e) => setJobType(e.target.value)}
               className="mt-1 p-2 border border-gray-300 rounded w-full"
             >
               <option value="Remote">Remote</option>
@@ -148,36 +145,46 @@ const CreateJobForm = () => {
 
 
 
-          {/* Job Type */}
+          {/* Location */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Job Type</label>
-            <select
-              name="type"
-              value={type}
-              onChange={(e) => setType(e.target.value)}
+            <label className="block text-sm font-medium text-gray-700">Location</label>
+            <input
+              type="text"
+              name="location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
               className="mt-1 p-2 border border-gray-300 rounded w-full"
-            >
-              <option value="">Select Type</option>
-              <option value="Full-time">Full-time</option>
-              <option value="Part-time">Part-time</option>
-              <option value="Internship">Internship</option>
-            </select>
+              placeholder="e.g. Delhi"
+            />
           </div>
+
+          {/* contact */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">Contact</label>
+            <input
+              type="text"
+              name="contact"
+              value={contact}
+              onChange={(e) => setContact(e.target.value)}
+              className="mt-1 p-2 border border-gray-300 rounded w-full"
+              placeholder="e.g. contact@gmail.com"
+            />
+          </div>
+        
 
           {/* Salary */}
           <div>
-            <label className="block text-sm font-medium text-gray-700">Salary in LPA</label>
+            <label className="block text-sm font-medium text-gray-700">Stipend</label>
             <input
-              type="number"
+              type="text"
               name="salary"
               value={salary}
               onChange={(e) => setSalary(e.target.value)}
               className="mt-1 p-2 border border-gray-300 rounded w-full"
-              placeholder="e.g. 10 LPA"
+              placeholder="e.g. 50k/month"
             />
           </div>
         </div>
-
 
 
         {/* Skills Section */}

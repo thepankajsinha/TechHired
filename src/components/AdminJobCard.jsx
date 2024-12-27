@@ -23,8 +23,8 @@ function AdminJobCard({
   id,
   title = 'Unknown Job Title',
   company = 'Unknown Company',
-  type = 'Unknown Type',
-  experience = 'N/A',
+  jobType = 'Unknown Type',
+  duration = 'N/A',
   location = 'N/A',
   salary = 'N/A',
   skills = [],
@@ -33,7 +33,7 @@ function AdminJobCard({
   const { deleteJob,fetchJobs } = useFirebase(); // Firebase context
 
   const today = getFormattedDate();
-  const duration = calculateDaysBetweenDates(today, postedOn);
+  const durationInDays = calculateDaysBetweenDates(today, postedOn);
 
   const handleDelete = () => {
     if (id) {
@@ -53,7 +53,7 @@ function AdminJobCard({
           {title} - {company}
         </h1>
         <p>
-          {type} &#x2022; Exp: {experience} &#x2022; {location} &#x2022; {salary} LPA
+          {duration} &#x2022; {location} &#x2022; {salary} &#x2022; {jobType}
         </p>
         <div className="flex flex-wrap items-center gap-2">
           {skills.map((skill, index) => (
@@ -71,9 +71,9 @@ function AdminJobCard({
       <div className="flex flex-col items-start lg:items-end gap-4 mt-4 lg:mt-0">
         <p>
           Posted{' '}
-          {duration > 30
-            ? `${Math.round(duration / 30)} months`
-            : `${Math.round(duration)} days`}{' '}
+          {durationInDays > 30
+            ? `${Math.round(durationInDays / 30)} months`
+            : `${Math.round(durationInDays)} days`}{' '}
           ago
         </p>
         <button

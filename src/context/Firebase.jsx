@@ -90,7 +90,7 @@ export const FirebaseProvider = (props) => {
 
 
 
-      const fetchJobsCustom = async ({ title, type, location, company }) => {
+      const fetchJobsCustom = async ({ title, location, jobType, company }) => {
         console.log(title);
         const tempJobs = [];
     
@@ -101,7 +101,7 @@ export const FirebaseProvider = (props) => {
             jobsRef = query(jobsRef, where("title", "==", title));
         }
         if (type) {
-            jobsRef = query(jobsRef, where("type", "==", type));
+            jobsRef = query(jobsRef, where("jobType", "==", jobType));
         }
         if (location) {
             jobsRef = query(jobsRef, where("location", "==", location));
