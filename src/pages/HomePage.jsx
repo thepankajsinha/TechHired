@@ -2,8 +2,9 @@ import React from "react";
 import Header from "../components/Header";
 import SearchBar from "../components/SearchBar";
 import JobCard from "../components/JobCard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useFirebase } from "../context/Firebase";
+import { Loader } from 'lucide-react';
 
 function HomePage() {
   const { jobs, fetchJobs, loading, fetchJobsCustom } = useFirebase();
@@ -14,9 +15,13 @@ function HomePage() {
   }, []);
 
   if (loading) {
-    return(
+    return (
       <div className="h-screen flex items-center justify-center text-white text-3xl">
-        <h1>Loading...</h1>
+        <Loader className="animate-spin" 
+         style={{
+          width: "4rem", // Default size
+          height: "4rem", 
+        }}/>
       </div>
     );
   }

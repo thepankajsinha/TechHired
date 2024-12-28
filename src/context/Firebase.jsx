@@ -139,6 +139,7 @@ export const FirebaseProvider = (props) => {
         }
     };
     
+    
     const deleteJob = async (jobId) => {
         try {
             const jobRef = doc(firestore, "jobs", jobId); // Reference to the specific job document
