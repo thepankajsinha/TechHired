@@ -1,8 +1,6 @@
-# TechHired
-
 # HomePage
 
-![home-00](https://github.com/user-attachments/assets/5078ca9a-7996-4530-99e8-a96ff9437adc)
+![22222](https://github.com/user-attachments/assets/ad6c7c32-8b77-42eb-b86f-378162eefb24)
 
 
 # Login and Signup
