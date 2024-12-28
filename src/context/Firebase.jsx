@@ -51,25 +51,34 @@ export const FirebaseProvider = (props) => {
     }
 
 
-    const createJob = async (title,company,location,postedOn,experience,type,salary,skills,jobLink) => {
+    const createJob = async (title, company, jobType, postedOn, duration, location, salary, skills, jobLink, contact) => {
         try {
-            await addDoc(collection(firestore, "jobs"), {
+            // Construct the job object dynamically
+            const jobData = {
                 title,
                 company,
-                location,
+                jobType,
                 postedOn,
-                experience,
-                type,
+                duration,
+                location,
                 salary,
                 skills,
-                jobLink
-            });
+                jobLink,
+            };
+    
+            // Add contact only if it exists
+            if (contact) {
+                jobData.contact = contact;
+            }
+    
+            // Add document to Firestore
+            await addDoc(collection(firestore, "jobs"), jobData);
             alert("Job created successfully");
         } catch (error) {
             console.error("Error adding document: ", error);
         }
-    }
-
+    };
+    
 
     const fetchJobs = async () => {
         setLoading(true); 
@@ -100,12 +109,15 @@ export const FirebaseProvider = (props) => {
         if (title) {
             jobsRef = query(jobsRef, where("title", "==", title));
         }
-        if (type) {
-            jobsRef = query(jobsRef, where("jobType", "==", jobType));
-        }
+
         if (location) {
             jobsRef = query(jobsRef, where("location", "==", location));
         }
+
+        if (jobType) {
+            jobsRef = query(jobsRef, where("jobType", "==", jobType));
+        }
+
         if (company) {
             jobsRef = query(jobsRef, where("company", "==", company));
         }
